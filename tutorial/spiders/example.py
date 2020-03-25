@@ -10,6 +10,5 @@ class ExampleSpider(scrapy.Spider):
     ]
 
     def parse(self, response):
-        print('---------')
         print(response.xpath(
             '//li[@class="dropdown"]/a/text()').get(default='not-found'))
